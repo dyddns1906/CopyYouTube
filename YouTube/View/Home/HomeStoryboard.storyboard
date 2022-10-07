@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="USs-rz-8D1">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation View Controller-->
+        <scene sceneID="Lmq-0o-vLw">
+            <objects>
+                <navigationController storyboardIdentifier="HomeStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="USs-rz-8D1" customClass="BaseNavigationViewController" customModule="YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Y5-Ix-gXm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jik-9G-GYe" kind="relationship" relationship="rootViewController" id="Dxx-MX-H4p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQl-tD-SYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="663"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="veZ-Ic-1Gp">
+            <objects>
+                <viewController id="jik-9G-GYe" customClass="HomeViewController" customModule="YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7vH-gO-5WE">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nJG-Yj-z2O">
+                                <rect key="frame" x="0.0" y="132" width="390" height="678"/>
+                                <color key="backgroundColor" name="BackgroundDepth1"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3M-n8-c0A">
+                                <rect key="frame" x="0.0" y="97" width="390" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="wRP-F1-dhG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nox-lT-xKy" customClass="MainHeaderView" customModule="YouTube" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="47" width="390" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Anq-ip-SlT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pPG-SM-SFz"/>
+                        <color key="backgroundColor" name="BackgroundDepth1"/>
+                        <constraints>
+                            <constraint firstItem="pPG-SM-SFz" firstAttribute="bottom" secondItem="nJG-Yj-z2O" secondAttribute="bottom" id="CtL-ub-1Jh"/>
+                            <constraint firstItem="nox-lT-xKy" firstAttribute="top" secondItem="pPG-SM-SFz" secondAttribute="top" id="J5z-dh-RWt"/>
+                            <constraint firstItem="pPG-SM-SFz" firstAttribute="trailing" secondItem="nJG-Yj-z2O" secondAttribute="trailing" id="Q19-RX-iNR"/>
+                            <constraint firstItem="pPG-SM-SFz" firstAttribute="trailing" secondItem="nox-lT-xKy" secondAttribute="trailing" id="afc-S3-oTC"/>
+                            <constraint firstItem="nJG-Yj-z2O" firstAttribute="leading" secondItem="pPG-SM-SFz" secondAttribute="leading" id="dec-h5-szB"/>
+                            <constraint firstItem="k3M-n8-c0A" firstAttribute="leading" secondItem="pPG-SM-SFz" secondAttribute="leading" id="eIT-no-Ia2"/>
+                            <constraint firstItem="nox-lT-xKy" firstAttribute="leading" secondItem="pPG-SM-SFz" secondAttribute="leading" id="hjL-gh-oBt"/>
+                            <constraint firstItem="nJG-Yj-z2O" firstAttribute="top" secondItem="k3M-n8-c0A" secondAttribute="bottom" id="neH-Dy-3NH"/>
+                            <constraint firstItem="k3M-n8-c0A" firstAttribute="top" secondItem="nox-lT-xKy" secondAttribute="bottom" id="tS6-2d-GOg"/>
+                            <constraint firstItem="pPG-SM-SFz" firstAttribute="trailing" secondItem="k3M-n8-c0A" secondAttribute="trailing" id="vL6-h4-G36"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mrs-LO-PRC"/>
+                    <connections>
+                        <outlet property="tagListViewContainer" destination="k3M-n8-c0A" id="TPm-mC-wXN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coY-sd-qgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650.76923076923072" y="661.84834123222743"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundDepth1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
