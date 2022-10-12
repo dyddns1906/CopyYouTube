@@ -32,11 +32,27 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="hcQ-c4-4bq"/>
                             </constraints>
                         </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC4-tk-PVF">
+                            <rect key="frame" x="342.33333333333331" y="179.66666666666666" width="42.666666666666686" height="21"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-nT-073">
+                            <rect key="frame" x="0.0" y="205.66666666666666" width="390" height="4"/>
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                        </progressView>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="B6F-nT-073" secondAttribute="bottom" id="54x-vg-fLd"/>
+                        <constraint firstItem="B6F-nT-073" firstAttribute="top" secondItem="bC4-tk-PVF" secondAttribute="bottom" constant="5" id="7fv-Wm-fRz"/>
+                        <constraint firstAttribute="trailing" secondItem="B6F-nT-073" secondAttribute="trailing" id="DRh-9c-vFP"/>
+                        <constraint firstAttribute="trailing" secondItem="bC4-tk-PVF" secondAttribute="trailing" constant="5" id="Eot-gR-1bx"/>
                         <constraint firstItem="VFI-VT-y1I" firstAttribute="top" secondItem="T8Q-OD-oNA" secondAttribute="top" id="OhP-MW-o8W"/>
                         <constraint firstAttribute="bottom" secondItem="VFI-VT-y1I" secondAttribute="bottom" id="QkR-gm-xco"/>
                         <constraint firstAttribute="trailing" secondItem="VFI-VT-y1I" secondAttribute="trailing" id="crV-pV-tlT"/>
+                        <constraint firstItem="B6F-nT-073" firstAttribute="leading" secondItem="T8Q-OD-oNA" secondAttribute="leading" id="sV4-Qe-WeU"/>
                         <constraint firstItem="VFI-VT-y1I" firstAttribute="leading" secondItem="T8Q-OD-oNA" secondAttribute="leading" id="sZs-KO-lgo"/>
                     </constraints>
                 </view>
@@ -111,6 +127,12 @@
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
